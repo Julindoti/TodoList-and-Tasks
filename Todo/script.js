@@ -4,6 +4,8 @@
 const unfinished = document.getElementById("unfinished");
 const taskCompleted = document.getElementById("completed");
 
+//localStorage.clear() => Use this method up here to reset the localStorage Adriano!
+
 function handleTodo(){
 
   console.log("KRATOS");
