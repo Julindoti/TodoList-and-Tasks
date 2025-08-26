@@ -16,16 +16,8 @@ body{
   align-items: center;
   
 }
-input{
-  padding: 5px;  
-  height: 25px;
-  color: white;
-  border: transparent;
-  background-color: black!important;
-  transition: all 0.1s;
-}
 button{
-    background-color: black;
+  background-color: black;
     color: white;
     width: 100px;
     height: 25px;
@@ -33,28 +25,58 @@ button{
     border: transparent;
     transition:ease-in 0.2s;
     
+    
   }
   button:hover{
     animation: border-change 5s infinite ease-in;
     opacity: 0.85;
     transform: translateY(1px);
-
+    
   }
+textarea {
+
+    margin-bottom: 10px;
+    padding: 6px;  
+    border-radius: 4px;
+    color: white;
+    resize: none;
+    border: transparent;
+    background-color: black!important;
+    background-position:right!important;
+  /*animation: pencil-svg 20s infinite ease-in ;*/
+}
+    textarea::-webkit-scrollbar{
+
+      width: 5px;
+      background-color: transparent;
+    
+    } 
+    textarea::-webkit-scrollbar-thumb{
+
+      width:2.5px;
+      background-color: rgb(102, 101, 101);
+      border-radius: 360px;
+      cursor:alias;
+    }
+    
+    textarea:focus{
+      outline: transparent;
+    }
+
 .todo_card {
     
     color:white;
     display: grid;
     font-size: 16px;
     gap:30px;
-    border:solid 0.5px white;
-    background-color: rgb(33, 31, 43);
+    background-color: rgba(26, 24, 24, 0.87);
+    background-size: 20px;  
     border-radius: 5px;
     padding: 10px;
     margin-top: 15px;
+    margin-bottom: 15px;
     min-width: 350px;
     min-height: 400px;
-
-
 }
 .task{
 
@@ -62,7 +84,14 @@ button{
   margin-top: 5px;
   font-size: 16px;
 }
-
+#unfinished{
+  border:solid white 2px;
+  padding:4px;
+}
+#completed{
+  border:solid white 2px;
+  padding:4px;
+}
 @keyframes border-change {
 
   0%,100%{
@@ -78,6 +107,34 @@ button{
      box-shadow: 0px 0px 5px 0px rgb(14, 155, 26);  
     }
   
+}
+@keyframes pencil-svg{
+     0%,100%{
+       background-image: url('/icons/pencil-ui-circle-svgrepo-com\ \(2\).svg');
+       background-size: 30px;
+       background-repeat: no-repeat;
+     }
+     10%{
+       background-image: url('/icons/pencil-ui-circle-svgrepo-com\ \(3\).svg');
+       background-size: 30px;
+       background-repeat: no-repeat;
+     }
+     25%{
+        background-image: url('/icons/pencil-ui-circle-svgrepo-com\ \(4\).svg');
+       background-size: 30px;
+       background-repeat: no-repeat;
+     }
+     50%{
+       background: url('icons/pencil-ui-circle-svgrepo-com\ \(5\).svg') no-repeat ;
+       background-size: 30px;
+
+     }
+     70%{
+      background: url('icons/pencil-ui-circle-svgrepo-com\ \(6\).svg') no-repeat ;
+      background-size: 30px ;
+     }
+
+     
 }
 
 

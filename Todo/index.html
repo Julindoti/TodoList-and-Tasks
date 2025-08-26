@@ -11,7 +11,8 @@
     <h1 style="justify-self: center;">TodoList</h1>
     
     <div style="display:grid">
-     <input id="todo" type="text" placeholder="Digite sua tarefa aqui!" />
+     <textarea id="todo" type="text" placeholder="Digite sua tarefa aqui!">
+     </textarea>
      <div style="display: inline-flex; gap:20px; justify-self:center;">
         <button onclick="handleTodo()">Adicionar</button>
         <button onclick="clearStorage()">Limpar</button>
@@ -20,10 +21,12 @@
     
     <div id="unfinished">
       <h2>Não concluido</h2>
+      <hr>
     </div>
     
     <div id="completed">
       <h2>concluido</h2>
+      <hr>
     </div>
   </div>
 

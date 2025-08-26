@@ -4,12 +4,14 @@
 const taskUnfinished = document.getElementById("unfinished");
 const taskCompleted = document.getElementById("completed");
 const todoCard = document.getElementById("todo_card");
-const title =  taskUnfinished.children[0];  
+const input= document.getElementById("todo");
+const title =  taskUnfinished.children[0]; 
 
 //localStorage.clear() => Use this method up here to reset the localStorage Adriano!
-todoCard.addEventListener("click", function(){
-      document.body.style.
-    
+ 
+input.addEventListener("input", function(){
+     this.style.height="auto";
+     this.style.height =  this.scrollHeight + "px"; 
 })
 
 document.addEventListener('keydown', (event)=>{
