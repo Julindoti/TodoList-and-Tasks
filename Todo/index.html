@@ -7,12 +7,15 @@
     <title>Todo</title>
   </head>
   <body>
-    <div class="todo_card">
-    <h1 style="justify-self: center;">Todolist</h1>
+    <div class="todo_card" id="todo_card">
+    <h1 style="justify-self: center;">TodoList</h1>
     
-    <div>
-      Tarefa: <input id="todo" type="text" />
-      <button onclick="handleTodo()">Adicionar</button>
+    <div style="display:grid">
+     <input id="todo" type="text" placeholder="Digite sua tarefa aqui!" />
+     <div style="display: inline-flex; gap:20px; justify-self:center;">
+        <button onclick="handleTodo()">Adicionar</button>
+        <button onclick="clearStorage()">Limpar</button>
+     </div>
     </div>
     
     <div id="unfinished">

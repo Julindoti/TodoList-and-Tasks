@@ -9,25 +9,75 @@ html{
 }
 
 body{
-  font-family:monospace;
+  background-color: rgb(5, 2, 22);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   
 }
-.todo_card {
-    display: grid;
-    gap:20px;
-    background-color: rgb(216, 215, 215);
+input{
+  padding: 5px;  
+  height: 25px;
+  color: white;
+  border: transparent;
+  background-color: black!important;
+  transition: all 0.1s;
+}
+button{
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 25px;
     border-radius: 4px;
+    border: transparent;
+    transition:ease-in 0.2s;
+    
+  }
+  button:hover{
+    animation: border-change 5s infinite ease-in;
+    opacity: 0.85;
+    transform: translateY(1px);
+
+  }
+.todo_card {
+    
+    color:white;
+    display: grid;
+    font-size: 16px;
+    gap:30px;
+    border:solid 0.5px white;
+    background-color: rgb(33, 31, 43);
+    border-radius: 5px;
     padding: 10px;
-   margin-top: 10px;
+    margin-top: 15px;
+    min-width: 350px;
+    min-height: 400px;
 
 
 }
-#task{
+.task{
 
   cursor:pointer;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+@keyframes border-change {
+
+  0%,100%{
+     box-shadow: 0px 0px 5px 0px rgb(4, 4, 121);
+  }
+  25%{ 
+     box-shadow: 0px 0px 5px 0px rgb(161, 3, 3);  
+    }
+  50%{
+     box-shadow: 0px 0px 5px 0px rgb(185, 123, 7);  
+    }
+  75%{
+     box-shadow: 0px 0px 5px 0px rgb(14, 155, 26);  
+    }
+  
 }
 
 
