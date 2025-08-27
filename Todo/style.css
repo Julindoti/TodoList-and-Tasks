@@ -9,11 +9,11 @@ html{
 }
 
 body{
-  background-color: rgb(5, 2, 22);
+  background-color: rgb(6, 6, 20);
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  display: flex;
   justify-content: center;
   align-items: center;
+  
   
 }
 button{
@@ -30,9 +30,11 @@ button{
   button:hover{
     animation: border-change 5s infinite ease-in;
     opacity: 0.85;
-    transform: translateY(1px);
+    transform: translateY(2.5px);
+    
     
   }
+
 textarea {
 
     margin-bottom: 10px;
@@ -44,6 +46,7 @@ textarea {
     background-color: black!important;
     background-position:right!important;
   /*animation: pencil-svg 20s infinite ease-in ;*/
+  
 }
     textarea::-webkit-scrollbar{
 
@@ -68,15 +71,16 @@ textarea {
     color:white;
     display: grid;
     font-size: 16px;
-    gap:30px;
+    gap:5px;
     background-color: rgba(26, 24, 24, 0.87);
     background-size: 20px;  
     border-radius: 5px;
     padding: 10px;
-    margin-top: 15px;
+    margin-top: 50px;
     margin-bottom: 15px;
     min-width: 350px;
-    min-height: 400px;
+    min-height: 150px;
+    justify-self: center;
 }
 .task{
 
@@ -85,12 +89,30 @@ textarea {
   font-size: 16px;
 }
 #unfinished{
-  border:solid white 2px;
+  border:solid transparent 1px;
   padding:4px;
+  background-color: black;
+  color: white;
+  margin-top:10px;
+  width: auto !important;
+  justify-self: center;
 }
 #completed{
-  border:solid white 2px;
+  margin-top: 10px;
+  border:solid transparent 2px;
   padding:4px;
+  background-color: black;
+  color: white;justify-self: center;
+}
+input{
+       
+      padding: 5px;
+      width: 250px;
+      margin-top: 20px;
+      background-color: black !important;
+      color: white;
+      outline: transparent;
+      border: transparent;
 }
 @keyframes border-change {
 

@@ -7,30 +7,33 @@
     <title>Todo</title>
   </head>
   <body>
-    <div class="todo_card" id="todo_card">
-    <h1 style="justify-self: center;">TodoList</h1>
-    
-    <div style="display:grid">
-     <textarea id="todo" type="text" placeholder="Digite sua tarefa aqui!">
-     </textarea>
-     <div style="display: inline-flex; gap:20px; justify-self:center;">
-        <button onclick="handleTodo()">Adicionar</button>
-        <button onclick="clearStorage()">Limpar</button>
-     </div>
-    </div>
-    
+    <div style="align-self: center; justify-self:center; margin-top:20px; max-width:200px; color:white;">
+      <h1 style="justify-self: center;">TodoList</h1>
+      <input  id="search_ bar" placeholder="Pesquise sua nota" style="justify-self: center; display:flex;"/>
+      <div class="todo_card" id="todo_card">
+        
+        <div style="display:grid">
+          <textarea id="todo" type="text" placeholder="Digite sua tarefa aqui!">
+          </textarea>
+          <div style="display: inline-flex; gap:20px; justify-self:center;">
+            <button onclick="handleTodo()">Adicionar</button>
+            <button onclick="clearStorage()">Limpar Tudo</button>
+          </div>
+        </div>
+      </div>
+      
     <div id="unfinished">
-      <h2>Não concluido</h2>
+      <h2>Não concluído ❌  </h2>
       <hr>
     </div>
     
     <div id="completed">
-      <h2>concluido</h2>
+      <h2>Concluído ✅</h2>
       <hr>
     </div>
   </div>
 
-
+  </div>
   </body>
   <script src="script.js" defer></script>
 </html>
