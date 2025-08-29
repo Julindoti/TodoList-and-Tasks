@@ -105,7 +105,6 @@ textarea {
   color: white;justify-self: center;
 }
 #search_bar{
-       
   padding: 5px;
   width: 250px;
   margin-top: 20px;
@@ -113,6 +112,16 @@ textarea {
   color: white;
   outline: transparent;
   border: transparent;
+  height: 40px;
+}
+#delete_zone{
+
+  height:150px;
+  width: 150px;
+  background-color: red;
+  justify-self: right;
+  margin-right: 20px;
+  
 }
 .border_change_animation{
   
