@@ -83,7 +83,7 @@ textarea {
     justify-self: center;
 }
 .task{
-
+  
   cursor:pointer;
   margin-top: 5px;
   font-size: 16px;
@@ -104,15 +104,21 @@ textarea {
   background-color: black;
   color: white;justify-self: center;
 }
-input{
+#search_bar{
        
-      padding: 5px;
-      width: 250px;
-      margin-top: 20px;
-      background-color: black !important;
-      color: white;
-      outline: transparent;
-      border: transparent;
+  padding: 5px;
+  width: 250px;
+  margin-top: 20px;
+  background-color: black !important;
+  color: white;
+  outline: transparent;
+  border: transparent;
+}
+.border_change_animation{
+  
+  animation: border-change 5s ease-in infinite;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+      
 }
 @keyframes border-change {
 
@@ -155,8 +161,23 @@ input{
       background: url('icons/pencil-ui-circle-svgrepo-com\ \(6\).svg') no-repeat ;
       background-size: 30px ;
      }
-
-     
 }
+@keyframes bg-change{
+
+  0%,100%{
+     background-color:  rgb(4, 4, 121);
+  }
+  25%{ 
+     background-color: rgb(161, 3, 3);  
+    }
+  50%{
+    background-color: rgb(185, 123, 7);  
+    }
+  75%{
+     background-color: rgb(14, 155, 26);  
+    }
+  
+}
+
 
 

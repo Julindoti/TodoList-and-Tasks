@@ -19,7 +19,7 @@ input.addEventListener("input", function(){
 })
 document.addEventListener('keydown', (event)=>{
      if(event.key === "Enter"){ handleTodo() }
-     if(event.key === "Delete"){ clearStorage() }
+     if(event.key === "Delete"){ input.value=""}
 })   
 
 
@@ -52,8 +52,15 @@ function handleTodo(){
   newDiv.textContent = todo;
   newDiv.addEventListener("click", function () {
       taskCompleted.appendChild(newDiv);
+      completedAnimation();
       }) 
   
       unfinished.appendChild(newDiv);     
       todoInput.value = "";
+}
+function completedAnimation(){
+     
+    const hr = document.getElementById("hr")
+    hr.classList.add('border_change_animation ')
+
 }
