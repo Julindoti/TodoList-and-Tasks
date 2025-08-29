@@ -121,6 +121,8 @@ textarea {
   background-color: red;
   justify-self: right;
   margin-right: 20px;
+  align-self: center !important;
+
   
 }
 .border_change_animation{
