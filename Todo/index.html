@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" >
+    <script src="script.js" defer></script>
     <title>Todo</title>
   </head>
-  <body>
-    <div style="align-self: center; justify-self:center; margin-top:20px; max-width:200px; color:white;">
+  <body >
+  <div id="mode_switch" class="sun_svg">
+    </div>
+    <div style="align-self: center; justify-self:center; margin-top:20px; max-width:200px; color:white; margin-bottom:20px; ">
       <h1 style="justify-self: center;">TodoList</h1>
-      <input  id="search_bar" placeholder="Pesquise sua nota" style="justify-self: center; display:flex;"/>
+      <input  id="search_bar" autocomplete="off" placeholder="Pesquise sua nota" style="justify-self: center; display:flex;"/>
       <div class="todo_card" id="todo_card">
         
         <div style="display:grid">
@@ -35,5 +38,4 @@
     <div id="delete_zone"></div>
   </div>
   </body>
-  <script src="script.js" defer></script>
 </html>

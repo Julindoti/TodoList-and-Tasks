@@ -5,27 +5,60 @@ const taskCompleted = document.getElementById("completed");
 const todoCard = document.getElementById("todo_card");
 const input= document.getElementById("todo");
 const deleteZone= document.getElementById("delete_zone");
+const modeSwitch =  document.getElementById("mode_switch")
 const title =  taskUnfinished.children[0]; 
 const hr = taskUnfinished.children[1];
 const titleC= taskCompleted.children[0];
-const hrC =  taskCompleted.children[1]
-const localGet = JSON.parse(localStorage.getItem("Tasklist"), [])
+const hrC =  taskCompleted.children[1];
+let localGet = JSON.parse(localStorage.getItem("Tasklist"), []);
+let lightMode =  localStorage.getItem("lightmode");
 let array_list =  {state: "unfinished" , text :''}
 
 //localStorage.clear() //Use this method up here to reset the localStorage Adriano!
 
-deleteZone.addEventListener("dragover", mouseDown())
+
+modeSwitch.addEventListener("click", function(){
+
+     localStorage.getItem("lightmode");
+     console.log(localStorage.getItem("lightmode"))
+     lightMode !== "active" ? enableLightMode() : disableLightMode();
+
+
+})
+deleteZone.addEventListener("dragover", function(e){
+
+     e.preventDefault();
+     this.addEventListener("drop", function(){
+          
+          deleteZone.style
+          clearStorage()
+
+      })
+     console.log("DRAGOVER LOG")
+})
 
 input.addEventListener("input", function(){
-     this.style.height="auto";
+     this.style.height="auto !important";
      this.style.height =  this.scrollHeight + "px"; 
 })
 document.addEventListener('keydown', (event)=>{
      if(event.key === "Enter"){ handleTodo() }
      if(event.key === "Delete"){ input.value=""}
 })   
-function mouseDown(){
-     deleteZone.addEventListener("dragleave", ()=>{clearStorage()})
+
+function enableLightMode(){
+
+     document.body.classList.toggle("light_mode")
+     modeSwitch.classList.toggle("moon_svg")
+     modeSwitch.classList.remove("sun_svg")
+     localStorage.setItem("lightmode", "active");
+   
+}
+function disableLightMode(){
+     
+   document.body.classList.toggle("light_mode")
+   modeSwitch.classList.toggle ("sun_svg")  
+   localStorage.setItem("lightmode", null);  
 }
 function clearStorage(){
      
@@ -66,7 +99,7 @@ function localLoad(savedList){
               if (items.state === "unfinished"){
                     createDiv(items.text, items.state)
               }else if (items.state === "completed") {
-                    createDiv(items.text, items.state)
+                   createDiv(items.text, items.state)
              } 
          })
      }
@@ -108,4 +141,6 @@ function completedAnimation(){
     hr.classList.add('border_change_animation ')
     
 }
+if(lightMode === "active") enableLightMode();
 localLoad(localGet)
+

@@ -1,3 +1,25 @@
+:root{
+   
+  --background-color: rgb(10, 10, 32);
+  --color:white;
+  --bg-button:black;
+  --bg-content:black;
+  --outter-bg-content:rgba(26, 24, 24, 0.87);
+  --border-color:white;
+  --box-shadow-anim-1: rgb(9, 9, 53);
+  --box-shadow-anim-2: rgb(10, 10, 32);
+  --box-shadow-anim-3: rgb(1, 1, 58);
+  --box-shadow-anim-4: rgb(15, 15, 75);
+  --box-shadow-anim-5: rgba(4, 4, 66, 0.945);
+  --box-shadow-anim-6: rgb(2, 2, 73);
+  --box-shadow-anim-7: ;
+
+
+
+
+} 
+ 
+ 
  * {
   margin: 0;
   padding: 0;
@@ -9,16 +31,28 @@ html{
 }
 
 body{
-  background-color: rgb(6, 6, 20);
+
+  background-color: var(--background-color);
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  animation:bg-change 10s ease-in-out infinite ;
   
   
 }
+h1{
+  color:var(--color)
+}
+hr{
+  height:2px;
+  background-color: var(--bg-content);
+}
 button{
-  background-color: black;
-    color: white;
+    background-color: var(--bg-button);
+    color: var(--color);
     width: 100px;
     height: 25px;
     border-radius: 4px;
@@ -40,11 +74,13 @@ textarea {
     margin-bottom: 10px;
     padding: 6px;  
     border-radius: 4px;
-    color: white;
+    color: var(--color);
     resize: none;
     border: transparent;
-    background-color: black!important;
+    background-color: var(--bg-content);
     background-position:right!important;
+    height:150px !important;
+
   /*animation: pencil-svg 20s infinite ease-in ;*/
   
 }
@@ -68,15 +104,15 @@ textarea {
 
 .todo_card {
     
-    color:white;
+    color:var(--color);
     display: grid;
     font-size: 16px;
     gap:5px;
-    background-color: rgba(26, 24, 24, 0.87);
+    background-color: var(--outter-bg-content);
     background-size: 20px;  
     border-radius: 5px;
     padding: 10px;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 15px;
     min-width: 350px;
     min-height: 150px;
@@ -87,43 +123,89 @@ textarea {
   cursor:pointer;
   margin-top: 5px;
   font-size: 16px;
+  max-block-size: 20px;
 }
 #unfinished{
-  border:solid transparent 1px;
+  min-height:150px ;
+  min-width:300px ;
   padding:4px;
-  background-color: black;
-  color: white;
-  margin-top:10px;
-  width: auto !important;
+  background-color: var(--bg-content);
+  color: var(--color);
+  margin-top:20px;
   justify-self: center;
+
 }
 #completed{
-  margin-top: 10px;
+  min-height:150px ;
+  min-width:300px ;
+  margin-top: 20px;
   border:solid transparent 2px;
   padding:4px;
-  background-color: black;
-  color: white;justify-self: center;
+  background-color: var(--bg-content);
+  color: var(--color);
+  justify-self: center;
+  margin-bottom: 200px;
 }
 #search_bar{
+  flex-grow: 5;
   padding: 5px;
-  width: 250px;
+  min-width: 200px;
   margin-top: 20px;
-  background-color: black !important;
-  color: white;
+  background-color: var(--bg-content);
+  color: var(--color);
   outline: transparent;
   border: transparent;
   height: 40px;
 }
 #delete_zone{
 
+
   height:150px;
   width: 150px;
-  background-color: red;
-  justify-self: right;
+  border-radius:4px;
+  border:dashed 4px var(--border-color);
+  margin-left:10px;
   margin-right: 20px;
-  align-self: center !important;
+  margin-bottom: 100px;
+  position: absolute;
+  right:0%;
+  top:70%;
+  
+  
+}
+
+#delete_zone:-moz-drag-over{
+
+   border: dashed 10px white ;
+}
+#mode_switch{
+  
+  z-index: 50;
+  height:50px;
+  width: 50px;
+  border-radius: 10px;
+  right:0%;
+  margin-right: 20px;
+  margin-top:10px;
+  position:fixed;
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: center;
+  cursor:pointer;
+  background-color: var(--bg-content);
+  align-self:flex-start;
 
   
+}
+#mode_change:hover{
+  
+  transition: all 0.2s ease-in;
+  border:solid 2px var(--border-color) !important;
+
+}
+.dashed_border{
+
+  border:dashed 7px white !important;
 }
 .border_change_animation{
   
@@ -131,6 +213,29 @@ textarea {
   transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
       
 }
+.light_mode{
+   
+  --background-color: rgb(197, 192, 192);
+  --color:rgb(0, 0, 0);
+  --bg-button:rgb(223, 223, 223);
+  --bg-content:white;
+  --outter-bg-content:rgb(165, 161, 161);
+  --border-color:black;
+  --box-shadow-anim-1: rgb(240, 240, 243);
+  --box-shadow-anim-2: rgb(245, 226, 226);
+  --box-shadow-anim-3: rgb(219, 219, 238);
+  --box-shadow-anim-4: rgb(255, 254, 254);
+  --box-shadow-anim-5: rgba(247, 247, 247, 0.945);
+  --box-shadow-anim-6: rgb(233, 233, 240);
+}
+.moon_svg{
+  background-image: url("/icons/moon-star-svgrepo-com\ \(3\).svg");
+
+}
+.sun_svg{
+  background-image:url("/icons/sun-svgrepo-com\ \(2\).svg");
+}
+
 @keyframes border-change {
 
   0%,100%{
@@ -171,22 +276,30 @@ textarea {
      70%{
       background: url('icons/pencil-ui-circle-svgrepo-com\ \(6\).svg') no-repeat ;
       background-size: 30px ;
+      background-color: rgb(15, 1, 41);
      }
 }
 @keyframes bg-change{
 
   0%,100%{
-     background-color:  rgb(4, 4, 121);
+     box-shadow:inset 50px -50px 360px 200px  var(--box-shadow-anim-1);
   }
   25%{ 
-     background-color: rgb(161, 3, 3);  
+     box-shadow:inset 150px -100px 360px 200px var(--box-shadow-anim-2);  
     }
+  35%{
+     box-shadow:inset 200px -75px 360px 200px  var(--box-shadow-anim-3);  
+  }  
   50%{
-    background-color: rgb(185, 123, 7);  
+    box-shadow:inset -150px -20px 360px 200px var(--box-shadow-anim-4);  
     }
   75%{
-     background-color: rgb(14, 155, 26);  
+     box-shadow:inset -175px 150px 360px 100px var(--box-shadow-anim-5);  
     }
+  85%{
+     box-shadow:inset -150px -50px 360px 100px var(--box-shadow-anim-6);  
+
+  }  
   
 }
 
